@@ -96,7 +96,7 @@ class MainApp:
         # Styles
         self.style = ttk.Style()
         # self.style.theme_use("clam")
-        self.style.configure("A.TLabel", font="Helvetica 8 bold", background="#E6E8E8", foreground="black",
+        self.style.configure("A.TLabel", font="Helvetica 8 bold", background="#EFEF8F", foreground="black",
                              borderwidth=2)
         self.style.configure("B.TLabel", font="Helvetica 8 bold", background="white", foreground="black",
                              borderwidth=2)
@@ -105,18 +105,18 @@ class MainApp:
         self.style.configure("A.TCombobox", font="Helvetica 8 bold", background="green", foreground="red")
         self.style.configure("A.TFrame", font="Helvetica 8 bold", foreground="black", background="yellow",
                              borderwidth=2)
-        self.style.configure("B.TFrame", font="Helvetica 8 bold", foreground="black", background="#E6E8E8",
+        self.style.configure("B.TFrame", font="Helvetica 8 bold", foreground="black", background="#EFEF8F",
                              borderwidth=2)
-        self.style.configure("C.TFrame", font="Helvetica 8 bold", foreground="black", background="orange",
+        self.style.configure("C.TFrame", font="Helvetica 8 bold", foreground="black", background="#D1D17D",
                              borderwidth=2)
         self.style.configure("A.TButton", font="Helvetica 8 bold", background="grey", foreground="black", width=16)
         self.style.configure("Treeview", background="silver", foreground="black", rowheight="25",
                              fieldbackground="silver")
-        self.style.map("Treeview", background=[("selected", "orange")])
+        self.style.map("Treeview", background=[("selected", "#B3B36B")])
 
         # First Selection Area
         self.lab_select_store_1 = tk.Label(self.selection_sub_frame11, text="Store\nSelection:",
-                                           font="Helvetica 8 bold", background="#E6E8E8", foreground="black",
+                                           font="Helvetica 8 bold", background="#EFEF8F", foreground="black",
                                            borderwidth=2, height=3)
         self.lab_select_store_1.grid(row=0, column=0, padx=2, pady=2)
 
@@ -217,7 +217,7 @@ class MainApp:
 
         # Date choose entry
         self.cal = DateEntry(self.selection_sub_frame13, font="Helvetica 8 bold", date_pattern='MM/dd/yyyy', width=10,
-                             background='grey', foreground='white', borderwidth=2, year=2020)
+                             background='grey', foreground='white', borderwidth=2, year=2021)
         self.cal.grid(row=1, column=0, padx=2, pady=2)
         self.cal.bind("<<DateEntrySelected>>", self.date_selection)
 
@@ -328,9 +328,9 @@ class MainApp:
         self.tp_tree.column("Store name", width=180, minwidth=180, anchor="w")
         self.tp_tree.column("Delivery day", width=60, minwidth=60, anchor="w")
         self.tp_tree.column("Delivery time", width=60, minwidth=60, anchor="w")
-        self.tp_tree.column("Transport company", width=80, minwidth=80, anchor="w")
+        self.tp_tree.column("Transport company", width=100, minwidth=100, anchor="w")
         self.tp_tree.column("Transport mode", width=80, minwidth=80, anchor="w")
-        self.tp_tree.column("Comment", width=240, minwidth=240, anchor="w")
+        self.tp_tree.column("Comment", width=220, minwidth=220, anchor="w")
 
         # Create headings of Tree
         self.tp_tree.heading("#0", text="", anchor="w")
@@ -445,7 +445,7 @@ class MainApp:
         # Query Year CheckButton
         self.query_year_box2_var = tk.IntVar()
         self.query_year_box2_check = tk.Checkbutton(self.query_frame3, variable=self.query_year_box2_var,
-                                                    width=1, background="grey", relief="groove")
+                                                    width=1, background="#D1D17D", relief="groove")
         self.query_year_box2_check.grid(row=1, column=1, padx=5, pady=5)
 
         # Query Year Entry
@@ -460,7 +460,7 @@ class MainApp:
         # Query Week CheckButton
         self.query_week_box2_var = tk.IntVar()
         self.query_week_box2_check = tk.Checkbutton(self.query_frame3, variable=self.query_week_box2_var,
-                                                    width=1, background="grey", relief="groove")
+                                                    width=1, background="#D1D17D", relief="groove")
         self.query_week_box2_check.grid(row=1, column=3, padx=5, pady=5)
 
         # Query Week Entry
@@ -475,19 +475,19 @@ class MainApp:
         # Query Date CheckButton
         self.query_cal_box2_var = tk.IntVar()
         self.query_cal_box2_check = tk.Checkbutton(self.query_frame3, variable=self.query_cal_box2_var,
-                                                   width=1, background="grey", relief="groove")
+                                                   width=1, background="#D1D17D", relief="groove")
         self.query_cal_box2_check.grid(row=1, column=5, padx=5, pady=5)
 
         # Query Date entry
         self.query_cal_box2 = DateEntry(self.query_frame3, font="Helvetica 8 bold", date_pattern='MM/dd/yyyy', width=10,
-                                        background='grey', foreground='white', borderwidth=2, year=2020)
+                                        background='D1D17D', foreground='white', borderwidth=2, year=2020)
         self.query_cal_box2.grid(row=1, column=6, padx=2, pady=5)
         # self.query_cal_box2.bind("<<DateEntrySelected>>", lambda event: self.db_date_query(event, self.tp_tree))
 
         # Query Multi ID CheckButton
         self.query_multi_id_box2_var = tk.IntVar()
         self.query_multi_id_check = tk.Checkbutton(self.query_frame3, variable=self.query_multi_id_box2_var,
-                                                   width=1, background="grey", relief="groove")
+                                                   width=1, background="#D1D17D", relief="groove")
         self.query_multi_id_check.grid(row=1, column=7, padx=5, pady=5)
 
         # Query Multi ID Entry
@@ -501,7 +501,7 @@ class MainApp:
         # Query Store CheckButton
         self.query_store_box2_var = tk.IntVar()
         self.query_store_box2_check = tk.Checkbutton(self.query_frame3, variable=self.query_store_box2_var,
-                                                     width=1, background="grey", relief="groove")
+                                                     width=1, background="#D1D17D", relief="groove")
         self.query_store_box2_check.grid(row=1, column=9, padx=5, pady=5)
 
         # Query Store Entry
@@ -514,7 +514,7 @@ class MainApp:
         # Query Company CheckButton
         self.query_company_box2_var = tk.IntVar()
         self.query_company_box2_check = tk.Checkbutton(self.query_frame3, variable=self.query_company_box2_var,
-                                                       width=1, background="grey", relief="groove")
+                                                       width=1, background="#D1D17D", relief="groove")
         self.query_company_box2_check.grid(row=1, column=11, padx=5, pady=5)
 
         # Query Company Entry
@@ -545,14 +545,14 @@ class MainApp:
                 or not self.d_time.get() or not self.companies_box.get() or not self.t_mode.get():
             print("Please fill all fields out!")
             return
-        self.curs.execute("INSERT INTO tpp_table VALUES (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+        self.curs.execute("INSERT INTO transport_table VALUES (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
                           (self.loading_id_box.get(), self.act_year.cget("text"), self.act_week.cget("text"),
                            self.cal.get(), self.act_day.cget("text"), self.multi_id.get(), self.sid.get(),
                            self.sequence.get(), self.l_type.get(), self.l_time.get(), self.store_number_box.get(),
                            self.store_box.get(), self.d_day.get(), self.d_time.get(), self.companies_box.get(),
                            self.t_mode.get(), self.comment.get()))
-        self.curs.execute("SELECT * FROM tpp_table ORDER BY year ASC, date ASC, loading_time ASC, multi_id ASC, "
-                          "sequence_in_loading ASC LIMIT 1")
+        self.curs.execute("SELECT * FROM transport_table ORDER BY year ASC, date ASC, loading_time ASC, multi_id ASC, "
+                          "sequence ASC LIMIT 1")
 
         self.loading_id_box.delete(0, 'end')
         self.cal.delete(0, 'end')
@@ -635,8 +635,8 @@ class MainApp:
             return
 
         for selected_item in self.tp_tree.selection():
-            self.curs.execute("UPDATE tpp_table SET loading_id=?, year=?, week=?, date=?, day=?, multi_id=?,"
-                              "store_in_day=?, sequence_in_loading=?, loading_type=?, loading_time=?,"
+            self.curs.execute("UPDATE transport_table SET loading_id=?, year=?, week=?, date=?, day=?, multi_id=?,"
+                              "sid=?, sequence=?, loading_type=?, loading_time=?,"
                               "store_number=?, store_name=?, delivery_day=?, delivery_time=?,"
                               "transport_company=?, transport_mode=?, comment=?"
                               "WHERE oid=?",
@@ -654,7 +654,7 @@ class MainApp:
         self.conn = sqlite3.connect("files/db_transport_planner.db")
         self.curs = self.conn.cursor()
         for selected_item in tp_tree.selection():
-            self.curs.execute('DELETE FROM tpp_table WHERE oid=?', (tp_tree.set(selected_item, '#1'),))
+            self.curs.execute('DELETE FROM transport_table WHERE oid=?', (tp_tree.set(selected_item, '#1'),))
             self.conn.commit()
             self.curs.close()
             tp_tree.delete(selected_item)
@@ -688,44 +688,44 @@ class MainApp:
         self.curs = self.conn.cursor()
         sel_store = event.widget.get()
         # Set Store Number combobox according to the Store name
-        set_store_number_box = self.curs.execute('SELECT store_number FROM stores_list WHERE store_name=?', [sel_store])
+        set_store_number_box = self.curs.execute('SELECT store_number FROM stores WHERE store_name=?', [sel_store])
         row_store_number = set_store_number_box.fetchone()[0]
         self.store_number_box.set(row_store_number)
         # Set Transport company combobox to the Store's default company
-        set_companies_box = self.curs.execute('SELECT default_transport_company FROM stores_list WHERE store_name=?',
+        set_companies_box = self.curs.execute('SELECT default_transport_company FROM stores WHERE store_name=?',
                                               [sel_store])
         row_companies = set_companies_box.fetchone()[0]
         self.companies_box.set(row_companies)
         # Set Multi ID number combobox to the default Multi ID number of the Store
-        set_multi_id_box = self.curs.execute('SELECT default_multi_id FROM stores_list WHERE store_name=?', [sel_store])
+        set_multi_id_box = self.curs.execute('SELECT default_multi_id FROM stores WHERE store_name=?', [sel_store])
         row_multi_id = set_multi_id_box.fetchone()[0]
         self.multi_id.set(row_multi_id)
         # Set Loading type combobox to the default Loading type of the Store
-        set_l_type = self.curs.execute('SELECT default_loading_type FROM stores_list WHERE store_name=?', [sel_store])
+        set_l_type = self.curs.execute('SELECT default_loading_type FROM stores WHERE store_name=?', [sel_store])
         row_l_type = set_l_type.fetchone()[0]
         self.l_type.set(row_l_type)
         # Set Transport mode combobox to the default Transport mode of the Store
-        set_t_mode = self.curs.execute('SELECT default_transport_mode FROM stores_list WHERE store_name=?', [sel_store])
+        set_t_mode = self.curs.execute('SELECT default_transport_mode FROM stores WHERE store_name=?', [sel_store])
         row_t_mode = set_t_mode.fetchone()[0]
         self.t_mode.set(row_t_mode)
         # Set Sequence combobox to the default Sequence of the Store
-        set_sequence = self.curs.execute('SELECT default_sequence FROM stores_list WHERE store_name=?', [sel_store])
+        set_sequence = self.curs.execute('SELECT default_sequence FROM stores WHERE store_name=?', [sel_store])
         row_sequence = set_sequence.fetchone()[0]
         self.sequence.set(row_sequence)
         # Set Loading Time combobox to the default Loading Time of the Store
-        set_l_time = self.curs.execute('SELECT default_loading_time FROM stores_list WHERE store_name=?', [sel_store])
+        set_l_time = self.curs.execute('SELECT default_loading_time FROM stores WHERE store_name=?', [sel_store])
         row_l_time = set_l_time.fetchone()[0]
         self.l_time.set(row_l_time)
         # Set Delivery Day combobox to the default Delivery Day of the Store
-        set_d_day = self.curs.execute('SELECT default_delivery_day FROM stores_list WHERE store_name=?', [sel_store])
+        set_d_day = self.curs.execute('SELECT default_delivery_day FROM stores WHERE store_name=?', [sel_store])
         row_d_day = set_d_day.fetchone()[0]
         self.d_day.set(row_d_day)
         # Set Delivery Time combobox to the default Delivery Time of the Store
-        set_d_time = self.curs.execute('SELECT default_delivery_time FROM stores_list WHERE store_name=?', [sel_store])
+        set_d_time = self.curs.execute('SELECT default_delivery_time FROM stores WHERE store_name=?', [sel_store])
         row_d_time = set_d_time.fetchone()[0]
         self.d_time.set(row_d_time)
         # Set SID combobox to the default SID of the Store
-        set_sid = self.curs.execute('SELECT default_SID FROM stores_list WHERE store_name=?', [sel_store])
+        set_sid = self.curs.execute('SELECT default_SID FROM stores WHERE store_name=?', [sel_store])
         row_sid = set_sid.fetchone()[0]
         self.sid.set(row_sid)
         self.conn.commit()
@@ -763,7 +763,7 @@ class MainApp:
     def sequence_opt(self):
         self.conn = sqlite3.connect("files/db_transport_planner.db")
         self.curs = self.conn.cursor()
-        self.curs.execute('SELECT sequence FROM sequence_in_loading')
+        self.curs.execute('SELECT seq FROM sequence')
         data_seq = []
         for row in self.curs.fetchall():
             data_seq.append(row[0])
@@ -789,7 +789,7 @@ class MainApp:
     def sid_opt(self):
         self.conn = sqlite3.connect("files/db_transport_planner.db")
         self.curs = self.conn.cursor()
-        self.curs.execute('SELECT store_in_day FROM stores_in_day')
+        self.curs.execute('SELECT sid FROM store_in_day')
         data_s_id = []
         for row in self.curs.fetchall():
             data_s_id.append(row[0])
@@ -941,7 +941,7 @@ class MainApp:
     def store_opt(self):
         self.conn = sqlite3.connect("files/db_transport_planner.db")
         self.curs = self.conn.cursor()
-        self.curs.execute('SELECT store_name From stores_list')
+        self.curs.execute('SELECT store_name From stores')
         datastore = []
         for row in self.curs.fetchall():
             datastore.append(row[0])
@@ -954,7 +954,7 @@ class MainApp:
     def store_number_opt(self):
         self.conn = sqlite3.connect("files/db_transport_planner.db")
         self.curs = self.conn.cursor()
-        self.curs.execute('SELECT store_number From stores_list')
+        self.curs.execute('SELECT store_number From stores')
         data_store_number = []
         for row in self.curs.fetchall():
             data_store_number.append(row[0])
@@ -967,7 +967,7 @@ class MainApp:
     def companies_opt(self):
         self.conn = sqlite3.connect("files/db_transport_planner.db")
         self.curs = self.conn.cursor()
-        self.curs.execute('SELECT company_name FROM transport_companies')
+        self.curs.execute('SELECT transport_company FROM transport_companies')
         companies = []
         for row in self.curs.fetchall():
             companies.append(row[0])
@@ -979,8 +979,8 @@ class MainApp:
     def db_all_query(self, tp_tree):
         self.conn = sqlite3.connect("files/db_transport_planner.db")
         self.curs = self.conn.cursor()
-        self.curs.execute("SELECT * FROM tpp_table ORDER BY year ASC, date ASC, loading_time ASC, multi_id ASC, "
-                          "sequence_in_loading ASC")
+        self.curs.execute("SELECT * FROM transport_table ORDER BY year ASC, date ASC, loading_time ASC, multi_id ASC, "
+                          "sequence ASC")
         self.data_s = self.curs.fetchall()
         self.tp_tree.delete(*tp_tree.get_children())
         row_number = 1
@@ -1004,8 +1004,8 @@ class MainApp:
         self.conn = sqlite3.connect("files/db_transport_planner.db")
         self.curs = self.conn.cursor()
         sel_week = event.widget.get()
-        self.curs.execute("SELECT * FROM tpp_table WHERE week=? ORDER BY year ASC, date ASC, loading_time ASC, "
-                          "multi_id ASC, sequence_in_loading ASC", [sel_week])
+        self.curs.execute("SELECT * FROM transport_table WHERE week=? ORDER BY year ASC, date ASC, loading_time ASC, "
+                          "multi_id ASC, sequence ASC", [sel_week])
         self.data_s = self.curs.fetchall()
         self.tp_tree.delete(*tp_tree.get_children())
         row_number = 1
@@ -1029,8 +1029,8 @@ class MainApp:
         self.conn = sqlite3.connect("files/db_transport_planner.db")
         self.curs = self.conn.cursor()
         sel_year = event.widget.get()
-        self.curs.execute("SELECT * FROM tpp_table WHERE year=? ORDER BY year ASC, date ASC, loading_time ASC, "
-                          "multi_id ASC, sequence_in_loading ASC", [sel_year])
+        self.curs.execute("SELECT * FROM transport_table WHERE year=? ORDER BY year ASC, date ASC, loading_time ASC, "
+                          "multi_id ASC, sequence ASC", [sel_year])
         self.data_s = self.curs.fetchall()
         self.tp_tree.delete(*tp_tree.get_children())
         row_number = 1
@@ -1054,8 +1054,8 @@ class MainApp:
         self.conn = sqlite3.connect("files/db_transport_planner.db")
         self.curs = self.conn.cursor()
         sel_date = event.widget.get()
-        self.curs.execute("SELECT * FROM tpp_table WHERE date=? ORDER BY loading_time ASC, multi_id ASC, "
-                          "sequence_in_loading ASC", [sel_date])
+        self.curs.execute("SELECT * FROM transport_table WHERE date=? ORDER BY loading_time ASC, multi_id ASC, "
+                          "sequence ASC", [sel_date])
         self.data_s = self.curs.fetchall()
         self.tp_tree.delete(*tp_tree.get_children())
         row_number = 1
@@ -1079,8 +1079,8 @@ class MainApp:
         self.conn = sqlite3.connect("files/db_transport_planner.db")
         self.curs = self.conn.cursor()
         sel_multi_id = event.widget.get()
-        self.curs.execute("SELECT * FROM tpp_table WHERE multi_id=? ORDER BY year ASC, date ASC, loading_time ASC, "
-                          "sequence_in_loading ASC", [sel_multi_id])
+        self.curs.execute("SELECT * FROM transport_table WHERE multi_id=? ORDER BY year ASC, date ASC, loading_time ASC, "
+                          "sequence ASC", [sel_multi_id])
         self.data_s = self.curs.fetchall()
         self.tp_tree.delete(*tp_tree.get_children())
         row_number = 1
@@ -1104,8 +1104,8 @@ class MainApp:
         self.conn = sqlite3.connect("files/db_transport_planner.db")
         self.curs = self.conn.cursor()
         sel_store_query = event.widget.get()
-        self.curs.execute("SELECT * FROM tpp_table WHERE store_name=? ORDER BY year ASC, date ASC, loading_time ASC, "
-                          "multi_id ASC, sequence_in_loading ASC", [sel_store_query])
+        self.curs.execute("SELECT * FROM transport_table WHERE store_name=? ORDER BY year ASC, date ASC, loading_time ASC, "
+                          "multi_id ASC, sequence ASC", [sel_store_query])
         self.data_s = self.curs.fetchall()
         self.tp_tree.delete(*tp_tree.get_children())
         row_number = 1
@@ -1129,8 +1129,8 @@ class MainApp:
         self.conn = sqlite3.connect("files/db_transport_planner.db")
         self.curs = self.conn.cursor()
         sel_company = event.widget.get()
-        self.curs.execute("SELECT * FROM tpp_table WHERE transport_company=? ORDER BY year ASC, date ASC, "
-                          "loading_time ASC, multi_id ASC, sequence_in_loading ASC", [sel_company])
+        self.curs.execute("SELECT * FROM transport_table WHERE transport_company=? ORDER BY year ASC, date ASC, "
+                          "loading_time ASC, multi_id ASC, sequence ASC", [sel_company])
         self.data_s = self.curs.fetchall()
         self.tp_tree.delete(*tp_tree.get_children())
         row_number = 1
@@ -1185,7 +1185,7 @@ class MainApp:
             self.sel_company_multi_query = "%"
             print(self.sel_company_multi_query)
 
-        self.curs.execute("SELECT * FROM tpp_table WHERE "
+        self.curs.execute("SELECT * FROM transport_table WHERE "
                           "year IS (?) AND "
                           "week IS (?) AND "
                           "date IS (?) AND "
@@ -1193,7 +1193,7 @@ class MainApp:
                           "store_name IS (?) AND "
                           "transport_company = ? "
                           "ORDER BY year ASC, date ASC, "
-                          "loading_time ASC, multi_id ASC, sequence_in_loading ASC",
+                          "loading_time ASC, multi_id ASC, sequence ASC",
                           [self.sel_year_multi_query, self.sel_week_multi_query, self.sel_cal_multi_query,
                            self.sel_multi_id_multi_query, self.sel_store_multi_query, self.sel_company_multi_query])
         self.data_s = self.curs.fetchall()
@@ -1230,9 +1230,10 @@ def main():
     # width = root.winfo_screenwidth()
     # height = root.winfo_screenheight()
     # root.geometry(f'{width}x{height}')
-    root.geometry("1303x590")
+    root.geometry("1303x578")
     root.resizable(False, False)
-    root.title("Transport Planner")
+    root.title("[SZVCODE] Transport Planner Desktop")
+    root.iconbitmap("images/favicon.ico")
     MainApp(root, sel_company_multi_query=None)
     root.mainloop()
 
